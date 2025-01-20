@@ -1,0 +1,168 @@
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 95%;
+    max-height: 95vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-image {
+    width: 338px; /* 60% of 563px */
+    height: 507px; /* 60% of 845px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.modal-details {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+    text-align: center;
+}
+
+.modal-description {
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.size-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.size-selector {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.modal-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap;
+}
+
+.size-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+.size-options {
+    display: flex;
+    gap: 10px;
+}
+
+.size-button {
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.size-button:hover {
+    background-color: #000;
+    color: white;
+}
+
+.size-button.selected {
+    background-color: #000;
+    color: white;
+}
+
+.add-to-cart {
+    padding: 15px 30px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.add-to-cart:hover {
+    background-color: #333;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+@media (max-width: 600px) {
+    .modal-image {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 563/845;
+    }
+
+    .size-price-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .size-selector {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .size-options {
+        justify-content: center;
+    }
+}

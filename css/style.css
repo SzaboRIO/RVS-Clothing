@@ -1,0 +1,15 @@
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Garante que o conteúdo fique na parte inferior */
+  height: 100%; /* Faz o card ocupar toda a altura disponível */
+  border: none; /* Remove bordas padrão (opcional) */
+  margin-top: -24px;
+}
+
+.card-img-top {
+  border-radius: 10px; /* Cantos arredondados na imagem */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+  height: auto; /* Ajusta a altura para a proporção natural */
+}
